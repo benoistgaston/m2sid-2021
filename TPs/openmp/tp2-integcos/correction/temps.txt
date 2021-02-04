@@ -1,0 +1,10 @@
+Code origine
+		Temps de restitution :          6.7124 sec.
+Code openmp sans compilation openmp (integcosseq)
+		Temps de restitution :          6.6496 sec.
+Code openmp avec compilation openmp
+export OMP_NUM_THREADS=1
+		Temps de restitution :          6.6467 sec.
+export OMP_NUM_THREADS=4
+		Temps de restitution :          1.7269 sec.
+acceleration = 6.6467/1.7269 ~ 3,85 efficacite ~ 96%

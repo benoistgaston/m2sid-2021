@@ -1,0 +1,12 @@
+Matrices 1000x1000
+Code origine
+		Temps de restitution :          4.1036 sec.
+Code openmp sans compilation openmp (prodmatseq)
+		Temps de restitution :          4.0648 sec.
+Code openmp avec compilation openmp
+export OMP_NUM_THREADS=1
+		Temps de restitution :          5.3157 sec.
+export OMP_NUM_THREADS=4
+		Temps de restitution :          1.4613 sec.
+acceleration omp/omp = 5.3157/1.4613 ~ 3,64 efficacite ~ 90%
+acceleration omp/noomp = 4.0648/1.4613 ~ 2,78 efficacite ~ 70%
