@@ -1,0 +1,39 @@
+algo sequentiel:
+time ./bsortseq 100000
+real	0m29.719s
+user	0m29.716s
+sys	0m0.003s
+
+algo pair-impair sans openmp
+
+time ./bsortseq 100000
+real	0m34.687s
+user	0m34.682s
+sys	0m0.004s
+
+algo pair-impair avec openmp
+
+export OMP_NUM_THREADS=1
+time ./bsort 100000
+real0m38.021s
+user0m37.961s
+sys0m0.059s
+
+export OMP_NUM_THREADS=2
+time ./bsort 100000
+real0m19.540s
+user0m38.928s
+sys0m0.145s
+
+export OMP_NUM_THREADS=4
+time ./bsort 100000
+real0m11.395s
+user0m45.459s
+sys0m0.100s
+
+export OMP_NUM_THREADS=8
+time ./bsort 100000
+real0m7.056s
+user0m56.310s
+sys0m0.108s
+

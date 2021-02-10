@@ -1,0 +1,73 @@
+#Algo recursif sans openmp
+
+time ./fibseq 36
+n 36 fibonacci de n 14930352 
+real0m0.232s
+user0m0.230s
+sys0m0.003s
+
+time ./fibseq 40
+n 40 fibonacci de n 102334155 
+real0m1.111s
+user0m1.108s
+sys0m0.003s
+
+time ./fibseq 46
+n 46 fibonacci de n 1836311903 
+real0m15.309s
+user0m15.307s
+sys0m0.002s
+
+#Algo recursif full openmp
+
+export OMP_NUM_THREADS=1
+time ./fib 36
+n 36 fibonacci de n 14930352 
+real0m5.054s
+user0m5.050s
+sys0m0.004s
+
+time ./fib 40
+n 40 fibonacci de n 102334155 
+real0m32.508s
+user0m32.504s
+sys0m0.003s
+
+time ./fib 46
+Pas le courage d'attendre
+
+#Algo recursif hybride openmp seuil a 35
+
+export OMP_NUM_THREADS=1
+time ./fib 36
+n 36 fibonacci de n 14930352 
+real0m0.232s
+user0m0.229s
+sys0m0.003s
+
+time ./fib 40
+n 40 fibonacci de n 102334155 
+real0m1.173s
+user0m1.168s
+sys0m0.005s
+
+time ./fib 46
+n 46 fibonacci de n 1836311903 
+real0m15.898s
+user0m15.882s
+sys0m0.016s
+
+export OMP_NUM_THREADS=2
+time ./fib 46
+n 46 fibonacci de n 1836311903 
+real0m9.647s
+user0m15.938s
+sys0m0.004s
+
+export OMP_NUM_THREADS=4
+time ./fib 46
+n 46 fibonacci de n 1836311903 
+real0m6.155s
+user0m16.134s
+sys0m0.003s
+
